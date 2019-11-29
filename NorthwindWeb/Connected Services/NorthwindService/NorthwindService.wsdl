@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NorthwindService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52662/NorthwindService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52662/NorthwindService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52662/NorthwindService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NorthwindDAL.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INorthwindService_getOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_getOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_getLoginInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLoginInfo" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_getLoginInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLoginInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_ss_InputMessage">
+    <wsdl:part name="parameters" element="tns:ss" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_ss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ssResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_insertUserLoginInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertUserLoginInfo" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_insertUserLoginInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertUserLoginInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_addOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrder" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_addOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_addOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_addOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_asd_InputMessage">
+    <wsdl:part name="parameters" element="tns:asd" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_asd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:asdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_ue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ue" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_ue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ueResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsongetOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:JsongetOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsongetOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JsongetOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsongetLoginInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:JsongetLoginInfo" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsongetLoginInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JsongetLoginInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsoninsertUserLoginInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:JsoninsertUserLoginInfo" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsoninsertUserLoginInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JsoninsertUserLoginInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsonaddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:JsonaddOrder" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsonaddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JsonaddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsonaddOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:JsonaddOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_JsonaddOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JsonaddOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_Jsonasd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Jsonasd" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_Jsonasd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JsonasdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INorthwindService">
+    <wsdl:operation name="getOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/getOrderInfo" message="tns:INorthwindService_getOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/getOrderInfoResponse" message="tns:INorthwindService_getOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoginInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/getLoginInfo" message="tns:INorthwindService_getLoginInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/getLoginInfoResponse" message="tns:INorthwindService_getLoginInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ss">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/ss" message="tns:INorthwindService_ss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/ssResponse" message="tns:INorthwindService_ss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertUserLoginInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/insertUserLoginInfo" message="tns:INorthwindService_insertUserLoginInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/insertUserLoginInfoResponse" message="tns:INorthwindService_insertUserLoginInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/addOrder" message="tns:INorthwindService_addOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/addOrderResponse" message="tns:INorthwindService_addOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/addOrderDetail" message="tns:INorthwindService_addOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/addOrderDetailResponse" message="tns:INorthwindService_addOrderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="asd">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/asd" message="tns:INorthwindService_asd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/asdResponse" message="tns:INorthwindService_asd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ue">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/ue" message="tns:INorthwindService_ue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/ueResponse" message="tns:INorthwindService_ue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JsongetOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/JsongetOrderInfo" message="tns:INorthwindService_JsongetOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/JsongetOrderInfoResponse" message="tns:INorthwindService_JsongetOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JsongetLoginInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/JsongetLoginInfo" message="tns:INorthwindService_JsongetLoginInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/JsongetLoginInfoResponse" message="tns:INorthwindService_JsongetLoginInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JsoninsertUserLoginInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/JsoninsertUserLoginInfo" message="tns:INorthwindService_JsoninsertUserLoginInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/JsoninsertUserLoginInfoResponse" message="tns:INorthwindService_JsoninsertUserLoginInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonaddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/JsonaddOrder" message="tns:INorthwindService_JsonaddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/JsonaddOrderResponse" message="tns:INorthwindService_JsonaddOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonaddOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/JsonaddOrderDetail" message="tns:INorthwindService_JsonaddOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/JsonaddOrderDetailResponse" message="tns:INorthwindService_JsonaddOrderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Jsonasd">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/Jsonasd" message="tns:INorthwindService_Jsonasd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/JsonasdResponse" message="tns:INorthwindService_Jsonasd_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INorthwindService" type="tns:INorthwindService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/getOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoginInfo">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/getLoginInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ss">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/ss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUserLoginInfo">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/insertUserLoginInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/addOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/addOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asd">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/asd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ue">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/ue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsongetOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/JsongetOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsongetLoginInfo">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/JsongetLoginInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsoninsertUserLoginInfo">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/JsoninsertUserLoginInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonaddOrder">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/JsonaddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonaddOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/JsonaddOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Jsonasd">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/Jsonasd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NorthwindService">
+    <wsdl:port name="BasicHttpBinding_INorthwindService" binding="tns:BasicHttpBinding_INorthwindService">
+      <soap:address location="http://localhost:52662/NorthwindService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
